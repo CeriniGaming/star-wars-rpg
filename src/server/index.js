@@ -1,12 +1,11 @@
 import express from 'express';
+import {applyRoutes} from './router';
 
 const app = express();
 
 app.set('view engine', 'jade');
 
-app.get('/', (req, res) => {
-  res.render('index', {});
-});
+applyRoutes(app);
 
 const server = app.listen(59907, () => {
   const {address, port} = server.address();

@@ -21,7 +21,8 @@
     "fs-promise": "^0.3.1",
     "jade": "^1.11.0",
     "output-file-sync": "^1.1.1",
-    "react": "^0.13.3",
+    "react": "^0.14.0-beta1",
+    "react-dom": "^0.14.0-beta1",
     "rimraf": "^2.4.2",
     "webpack": "^1.10.3",
     "yargs": "^3.15.0"
