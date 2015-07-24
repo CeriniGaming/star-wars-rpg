@@ -3,6 +3,7 @@ import {applyRoutes} from './router';
 
 const app = express();
 
+app.use('/public', express.static('public'));
 app.set('view engine', 'jade');
 
 applyRoutes(app);

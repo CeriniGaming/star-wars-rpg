@@ -5,6 +5,7 @@ import CharacterCreator from '../components/CharacterCreator';
 export function applyRoutes(app) {
   app.get('/', (req, res) => {
     const reactApp = renderToString(<CharacterCreator />);
-    res.render('index', {reactApp});
+    const entryPoint = '/public/character-creator.js';
+    res.render('index', {reactApp, entryPoint});
   });
 }
