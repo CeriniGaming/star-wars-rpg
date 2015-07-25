@@ -28,4 +28,5 @@ node_modules
 
 #compiled sources
 lib
+!tools/lib
 public
