@@ -1,5 +1,4 @@
-import React from 'react';
-import {renderToString} from 'react-dom/server';
+import React, {renderToString} from 'react';
 import CharacterCreator from '../components/CharacterCreator';
 
 export function applyRoutes(app) {
