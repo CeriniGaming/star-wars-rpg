@@ -1,12 +1,11 @@
 import express from 'express';
-import {applyRoutes} from './router';
+import characterCreator from './routes/character-creator';
 
 const app = express();
 
-app.use('/public', express.static('public'));
 app.set('view engine', 'jade');
-
-applyRoutes(app);
+app.use('/public', express.static('public'));
+app.use('/', characterCreator);
 
 const server = app.listen(59907, () => {
   const {address, port} = server.address();
