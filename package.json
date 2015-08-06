@@ -20,6 +20,8 @@
     "eslint": "^0.24.1",
     "everyauth": "^0.4.9",
     "express": "^4.13.1",
+    "fluxible": "^0.5.1",
+    "fluxible-addons-react": "^0.1.6",
     "fs-promise": "^0.3.1",
     "jade": "^1.11.0",
     "output-file-sync": "^1.1.1",

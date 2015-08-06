@@ -1,13 +1,14 @@
 import {createFactory, renderToString} from 'react';
 import {Router} from 'express';
-import CharacterCreator from '../../components/CharacterCreator';
+import characterCreator from '../../apps/characterCreator';
+import {createElementWithContext} from 'fluxible-addons-react';
 
 const router = Router();
-const characterCreatorFactory = createFactory(CharacterCreator);
 
 router.get('/', (req, res) => {
-  const reactApp = renderToString(characterCreatorFactory());
   const entryPoint = '/public/character-creator.js';
+  const context = characterCreator.createContext();
+  const reactApp = renderToString(createElementWithContext(context));
   res.render('index', {reactApp, entryPoint});
 });
 

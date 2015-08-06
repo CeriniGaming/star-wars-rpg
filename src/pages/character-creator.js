@@ -1,5 +1,8 @@
 import React from 'react';
-import CharacterCreator from '../components/CharacterCreator';
+import characterCreator from '../apps/characterCreator.js';
+import {createElementWithContext} from 'fluxible-addons-react';
 
 const node = document.getElementById('character-creator');
-React.render(<CharacterCreator />, node);
+const context = characterCreator.createContext();
+const app = createElementWithContext(context);
+React.render(app, node);
